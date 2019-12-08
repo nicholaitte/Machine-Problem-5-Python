@@ -1,0 +1,26 @@
+from matplotlib import pyplot as plot
+import numpy as np
+
+sin=np.sin
+cos=np.cos
+tan=np.tan
+acos=np.arccos
+asin=np.arcsin
+atan=np.arctan
+x = eval(input())
+vector = np.arange(0,200)
+f = np.zeros((x.shape))
+
+for n in range(len(vector)):
+    if[n]==0:
+        f[n] =-1.5*x[n]+2*x[n+1]-0.5*x[n+2]
+    elif vector[n]<=198 and vector[n]>0:
+        f[n] =.5*x[n+1]-.5*x[n-1]
+    elif vector[n]==199:
+        f[n]= 1.5*x[n]-2*x[n-1]+.5*x[n-2]
+plot.plot(vector,x,'+r',label='x(n)')
+plot.xlabel('x')
+plot.plot(vector,f,'.b', label='y(n)')
+plot.ylabel('y')
+plot.legend()
+plot.show()
