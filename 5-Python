@@ -1,5 +1,6 @@
 from matplotlib import pyplot as plot
 import numpy as np
+import math
 
 sin=np.sin
 cos=np.cos
